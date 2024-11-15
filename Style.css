@@ -11,6 +11,9 @@ body{
     width: 100dvw;
     height: 100dvh;
 }
+aside{
+    display: none;
+}
 /* Style for header */
 header{
     position: relative;
@@ -322,7 +325,6 @@ h1{
 .contact-me-container{
     width: 60%;
     margin: 3rem auto;
-    height: 35rem;
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: 5px 5px 15px rgb(148, 148, 148);
@@ -399,4 +401,184 @@ form button:hover{
 }
 #copyright{
     text-align: center;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+    .information h2{
+        font-size: 1.5rem;
+    }
+    .about-container p{
+        font-size: 0.9rem;
+    }
+    .left li{
+        font-size: 1rem;
+    }
+    .right li{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width: 994px) {
+    .with-to-divice{
+        width: 90%;
+    }
+    .information{
+        flex-direction: column;
+    }
+    .about-container{
+        width: 100%;
+    }
+    .information h2{
+        font-size: 1.3rem;
+    }
+    .about-container p{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    .left li{
+        font-size: 0.9rem;
+    }
+    .right li{
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #menu{
+        display: none;
+    }
+    #profile{
+        padding-top: 2rem;
+    }
+
+    .form-container form,ul{
+        width: 100%;
+    }
+    .form-container{
+        flex-direction: column-reverse;
+    }
+
+    .date{
+        width: 30%;
+    }
+    /* Cteate Menu Ham */
+    aside{
+        display: block;
+        position: fixed;
+        z-index: 100;
+        width: 40%;
+        height: 100dvh;
+    }
+    aside img{
+        width: 2rem;
+        height: 2rem;
+    }
+    .open-menu{
+        display: block;
+    }
+    .open-menu:hover{
+        cursor: pointer;
+    }
+    #h-menu{
+        height: 100dvh;
+        display: none;
+        flex-direction: column;
+        gap: 0.2rem;
+        padding: 1rem;
+        list-style: none;
+        position: relative;
+        width: 100%;
+        padding-top: 4rem;
+        background: linear-gradient(0deg, rgba(21,21,21,1) 31%, rgba(14,122,0,1) 100%);
+    }
+    .h-menu-items{
+        display: block;
+        overflow: hidden;
+        border-radius: 1rem;
+        width: 100%;
+        transition: all 0.5s ease;
+        height: fit-content;
+    }
+    .h-menu-items a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        width: 100%;
+        padding: 1.5rem 1rem;
+    }
+    .close-menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .h-menu-items:hover{
+        background-color: #ffffff3f;
+    }
+    .close-menu:hover{
+        cursor: pointer;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    .information h2{
+        font-size: 1.1rem;
+    }
+    .about-container p{
+        width: 100%;
+        font-size: 0.7rem;
+    }
+    .left li{
+        font-size: 0.8rem;
+    }
+    .right li{
+        font-size: 0.7rem;
+    }
+
+    .professional-skills h2{
+        font-size: 1.1rem;
+    }
+    .Skill-name, 
+    .percent{
+        font-size: 0.8rem;
+    }
+    .Wrapper-list{
+        display: block;
+    }
+    .left-wrap,
+    .right-wrap{
+        width: 100%;
+    }
+
+    #education h2{
+        font-size: 1.1rem;
+    }
+    .name-degree{
+        font-size: 1rem;
+    }
+    .university-name{
+        font-size: 0.8rem;
+    }
+    .year{
+        font-size: 0.9rem;
+    }
+    .degree{
+        font-size: 1.07rem;
+    }
+
+    #contact h2{
+        font-size: 1.1rem;
+    }
+    .title-name{
+        font-size: 1rem;
+    }
+    .sub-name{
+        font-size: 0.85rem;
+    }
+    input{
+        font-size: 0.9rem;
+    }
+    textarea{
+        font-size: 0.8rem;
+    }
 }

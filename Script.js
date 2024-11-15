@@ -1,3 +1,4 @@
+
 const $ = document
 const personName = $.getElementById('name')
 const subjectMessage = $.getElementById('subject')
@@ -20,3 +21,18 @@ sendBtn.addEventListener("click", function sendEmail(event) {
     }
 
 })
+const openIcon = $.querySelector('.open-menu')
+const closeIcon = $.querySelector('.close-menu')
+const menu = $.querySelector('#h-menu')
+
+openIcon.addEventListener('click', function(){
+    menu.style.display = 'flex'
+    openIcon.style.display = 'none'
+})
+closeIcon.addEventListener('click', function(){
+    menu.style.display = 'none'
+    openIcon.style.display = 'block'
+})
+
+AOS.init();
+
