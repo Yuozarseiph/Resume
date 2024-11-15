@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <!-- Create header menu for simple -->
+        <nav id="menu">
+            <ul>
+                <li class="items"><a href="#about">About</a></li>
+                <li class="items"><a href="#skills">Skills</a></li>
+                <li class="items"><a href="#education">Education</a></li>
+                <li class="items"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Create profile contents -->
+        <nav id="profile">
+            <!-- Set profile picture -->
+            <div class="profile-picture">
+                <img src="Images/profile-pic.jpeg" alt="Profile Picture">
+            </div>
+            <!-- Set name and job -->
+            <div class="title">
+                <h1>Yousef Shaker Ardakani</h1>
+                <h2>A freelancer in Ardakan city</h2>
+            </div>
+            <!-- Create floating buttons and contact buttons -->
+            <div class="contact-btns">
+                <span class="contact-me btn"><a href="#contact">Contact Me</a></span>
+                <span class="projects btn"><a href="#">Projects</a></span>
+            </div>
+        </nav>
+        <div class="center-social-menu">
+            <ul class="social-media-btns">
+                <li class="items-social" id="telegram"><a href="https://t.me/developer_iranain"></a></li>
+                <li class="items-social" id="instagram"><a href="https://www.instagram.com/yousefshaker.dev"></a></li>
+                <li class="items-social" id="linkedin"><a href="https://www.linkedin.com/in/yousef-shaker-ba4420338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="information container" id="about">
+            <div class="about-container">
+                <h2>About</h2>
+                <p>I am a junior developer with experience in front-end web development.
+                    <br><br>I am currntly studying computer engineering at Yazd University.
+                </p>
+            </div>
+            <div class="basic-info-container">
+                <h2>Basic Information</h2>
+                <div class="wrapper-info">
+                    <ul class="info-lsit left">
+                        <li class="info-items">Age:</li>
+                        <li class="info-items">Email:</li>
+                        <li class="info-items">Phone:</li>
+                        <li class="info-items">Address:</li>
+                    </ul>
+                    <ul class="info-lsit right">
+                        <li class="info-items">20</li>
+                        <li class="info-items">YousefShakerDev@gmail.com</li>
+                        <li class="info-items">09107860475</li>
+                        <li class="info-items">Iran/Yazd/Ardakan</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="professional-skills container" id="skills">
+            <h2>Professional Skills</h2>
+            <div class="Wrapper-list">
+                <!-- Items Container -->
+                <div class="right-wrap">
+                    <div class="skills-item">
+                        <div class="wrapper-span">
+                            <span class="Skill-name">Html/Css</span>
+                            <span class="percent">80%</span>
+                        </div>
+                        <span class="percent-line html"></span>
+                    </div>
+                    <div class="skills-item">
+                        <div class="wrapper-span">
+                            <span class="Skill-name">JavaScript</span>
+                            <span class="percent">60%</span>
+                        </div>
+                        <span class="percent-line js"></span>
+                    </div>
+                </div>
+                <!-- Up : left / Down : right -->
+                <div class="left-wrap">
+                    <div class="skills-item">
+                        <div class="wrapper-span">
+                            <span class="Skill-name">FlexBox</span>
+                            <span class="percent">80%</span>
+                        </div>
+                        <span class="percent-line flex"></span>
+                    </div>
+                    <div class="skills-item">
+                        <div class="wrapper-span">
+                            <span class="Skill-name">Python</span>
+                            <span class="percent">45%</span>
+                        </div>
+                        <span class="percent-line python"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="education container" id="education">
+            <h2>Education</h2>
+            <div class="field-wrap">
+                <div class="date">
+                    <h4 class="year">2024</h4>
+                    <h3 class="degree">Studying</h3>
+                </div>
+                <div class="description">
+                    <h3 class="name-degree">Computer Engineer</h3>
+                    <h4 class="university-name">University of Yazd</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-me-container" id="contact">
+            <h2>Contact Me</h2>
+            <div class="form-container">
+                <form>
+                    <input id="name" type="text" placeholder="Enter your name">
+                    <input id="subject" type="text" placeholder="Subject">
+                    <input id="email" type="email" placeholder="Enter your email">
+                    <textarea name="" id="message"></textarea>
+                    <button id="send" type="submit">Send</button>
+                </form>
+                <ul>
+                    <li class="title-name">Address</li>
+                    <li class="sub-name">Iran/Yazd/Ardakan</li>
+                    <li class="title-name">Phone</li>
+                    <li class="sub-name">+98-910-7860475</li>
+                    <li class="title-name">Email</li>
+                    <li class="sub-name">YousefShakerDev@gmail.com</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <p id="copyright">© 2024 Yousef Shaker Ardakani</p>
+
+    <script src="Script.js"></script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Fira Code", monospace, cursive;
+    width: 100dvw;
+    height: 100dvh;
+}
+/* Style for header */
+header{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 35rem;
+    background-image: url("Images/ardakan-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: #01250070;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+}
+/* Style for menu contents */
+#menu{
+    display: grid;
+    place-content: center;
+}
+#menu ul{
+    margin-top: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+}
+.items{
+    display: flex;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.3rem;
+    transition: all 0.5s ease;
+}
+.items:hover {
+    cursor: pointer;
+    background-color: #ffffff5b;
+}
+.items a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+/* Style for profile navbar */
+header nav{
+    position: relative;
+    z-index: 3;
+}
+.profile-picture{
+    margin-top: 1rem;
+    display: grid;
+    place-items: center;
+}
+.profile-picture img{
+    width: 200px;
+    height: 200px;
+    border-radius: 1000px;
+}
+/* Style for titles */
+.title{
+    display: grid;
+    place-content: center;
+    
+}
+.title *{
+    text-align: center;
+    color: white;
+    margin-top: 0.5rem;
+}
+h1{
+    font-size: 2rem;
+}
+.title h2{
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+/* Style for Content Buttons */
+.contact-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+.btn{
+    display: block;
+    padding: 0.8rem 1.5rem;
+    background-color: #0e7a00;
+    border-radius: 0.4rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #119600;
+}
+/* Social Media btn Style */
+.center-social-menu{
+    width: 100%;
+    z-index: 3;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    bottom: 0;
+}
+.social-media-btns{
+    list-style: none;
+    display: flex;
+    position: relative;
+    gap: 1rem;
+    bottom: -50%;
+}
+#telegram{
+    background-image: url("Images/telegram-ic.png");
+}
+#instagram{
+    background-image: url("Images/insta-ic.png");
+}
+#linkedin{
+    background-image: url("Images/linkedin-ic.png");
+}
+.items-social{
+    border: 0.3rem solid rgb(255, 255, 255);
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+    border-radius: 1000px;
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.items-social a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.items-social:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+/* Main Style */
+
+.container{
+    width: 70%;
+    margin: 2.5rem auto;
+}
+/* Information Styles */
+.information{
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    margin: 2.5rem auto;
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: 5px 5px 15px rgb(148, 148, 148);
+}
+/* About Style */
+.information h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.about-container p{
+    margin-top: 1rem;
+    text-wrap: wrap;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.about-container{
+    width: 50%;
+}
+/* Info Style */
+.basic-info-container{
+    width: 50%;
+}
+.wrapper-info{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.left{
+    width: 30%;
+    font-size: 1.12rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.right{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.info-lsit{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Professional Skills Style */
+.professional-skills{
+    padding: 1rem;
+    box-shadow: 5px 5px 15px rgb(148, 148, 148);
+    border-radius: 1rem;
+}
+.professional-skills h2{
+    text-align: center;
+}
+.Wrapper-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: green;
+    margin-top: 1rem;
+}
+.left-wrap, .right-wrap{
+    width: 48%;
+}
+.skills-item span{
+    display: inline-block;
+}
+.wrapper-span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Line Styles */
+.percent-line{
+    position: relative;
+    margin: 1.5rem 0;
+    width: 100%;
+    height: 5px;
+    background-color: #0e7a004b;
+}
+.percent-line::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    background-color: #0e7a00;
+}
+.html::after{
+    width: 80%;
+}
+.js::after{
+    width: 60%;
+}
+.flex::after{
+    width: 80%;
+}
+.python::after{
+    width: 45%;
+}
+/* Education Styles */
+.education{
+    padding: 1rem;
+    box-shadow: 5px 5px 15px rgb(148, 148, 148);
+    border-radius: 1rem;
+}
+.education h2{
+    text-align: center;
+}
+.field-wrap{
+    display: flex;
+    align-items: center;
+    border-radius: 0.4rem;
+    overflow: hidden;
+}
+.date{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    background-color: #0e7a00;
+    padding: 1.5rem 0;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.4rem;
+    margin-left: 1rem;
+}
+.date{
+    color: white;
+}
+.university-name{
+    color: gray;
+    text-transform: uppercase;
+}
+.name-degree{
+    font-size: 1.5rem;
+}
+
+/* Contact Me Styles */
+.contact-me-container{
+    width: 60%;
+    margin: 3rem auto;
+    height: 35rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgb(148, 148, 148);
+}
+.contact-me-container h2{
+    text-align: center;
+}
+.form-container{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 1.3rem;
+}
+#form-title{
+    text-align: start;
+    font-size: 1.2rem;
+}
+input{
+    width: 100%;
+    height: 2rem;
+    border-radius: 1000px;
+    outline: none;
+    border: 1px solid #0e7a00;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+textarea{
+    border: 1px solid #0e7a00;
+    width: 100%;
+    height: 6rem;
+    resize: none;
+    outline: none;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+input:focus, textarea:focus{
+    border: 2px solid #0e7a00;
+}
+form button{
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 1rem;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #0e7a00;
+    transition: all 0.5s ease;
+}
+form button:hover{
+    background-color: #119600;
+}
+/* Ul Style */
+.form-container ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 45%;
+    gap: 0.5rem;
+}
+.title-name{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.sub-name{
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+#copyright{
+    text-align: center;
+}
