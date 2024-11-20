@@ -1,38 +1,29 @@
+window.addEventListener('load', () => {
+    // اضافه کردن تاخیر برای پایان انیمیشن لودر
+    setTimeout(() => {
+      const loader = document.querySelector('.loader');
+      // محو کردن لودر
+      loader.style.opacity = 0;
+      
+      // بعد از پایان انیمیشن، display را none کنیم
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 2000); // مدت زمانی که انیمیشن محو شدن طول می‌کشد
+    }, 100); // تأخیر اولیه که می‌توانید تنظیم کنید
+  });
 
-const $ = document
-const personName = $.getElementById('name')
-const subjectMessage = $.getElementById('subject')
-const emailAddress = $.getElementById('email')
-const textBox = $.getElementById('message')
-const sendBtn = $.getElementById('send')
+// Scroll animation using IntersectionObserver
+const scrollElements = document.querySelectorAll('.scroll-fade');
 
-sendBtn.addEventListener("click", function sendEmail(event) {
-    event.preventDefault();
-    
-    if(personName.value != '' && emailAddress.value != '' && subjectMessage.value != '' && textBox.value != ''){
-        const name = personName.value;
-        const email = emailAddress.value;
-        const subject = subjectMessage.value;
-        const message = textBox.value;
-        const mailtoLink = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-        window.open(mailtoLink, '_blank');
-    }else{
-        return false;
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
     }
+  });
+}, { threshold: 0.5 });
 
-})
-const openIcon = $.querySelector('.open-menu')
-const closeIcon = $.querySelector('.close-menu')
-const menu = $.querySelector('#h-menu')
-
-openIcon.addEventListener('click', function(){
-    menu.style.display = 'flex'
-    openIcon.style.display = 'none'
-})
-closeIcon.addEventListener('click', function(){
-    menu.style.display = 'none'
-    openIcon.style.display = 'block'
-})
-
-AOS.init();
-
+scrollElements.forEach(element => {
+  observer.observe(element);
+});

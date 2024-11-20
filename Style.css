@@ -1,584 +1,278 @@
-*,
-*::after,
-*::before{
-    box-sizing: border-box;
-    padding: 0;
+/* استایل کلی صفحه */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
-}
-
-body{
-    font-family: "Fira Code", monospace, cursive;
-    width: 100dvw;
-    height: 100dvh;
-}
-aside{
-    display: none;
-}
-/* Style for header */
-header{
-    position: relative;
-    z-index: 0;
-    width: 100%;
-    height: 35rem;
-    background-image: url("Images/ardakan-bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-header::before{
-    content: '';
-    display: block;
-    position: absolute;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* استایل لودر */
+  .loader {
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    z-index: 2;
-    background-color: #01250070;
-    backdrop-filter: blur(2px);
-    width: 100%;
-    height: 100%;
-}
-/* Style for menu contents */
-#menu{
-    display: grid;
-    place-content: center;
-}
-#menu ul{
-    margin-top: 1rem;
-    list-style: none;
+    background-color: rgba(0, 0, 0, 0.8); /* پس‌زمینه تیره */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.1rem;
-}
-.items{
-    display: flex;
-    padding: 0.8rem 1.5rem;
-    border-radius: 0.3rem;
-    transition: all 0.5s ease;
-}
-.items:hover {
-    cursor: pointer;
-    background-color: #ffffff5b;
-}
-.items a{
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-/* Style for profile navbar */
-header nav{
-    position: relative;
-    z-index: 3;
-}
-.profile-picture{
-    margin-top: 1rem;
-    display: grid;
-    place-items: center;
-}
-.profile-picture img{
-    width: 200px;
-    height: 200px;
-    border-radius: 1000px;
-}
-/* Style for titles */
-.title{
-    display: grid;
-    place-content: center;
-    
-}
-.title *{
-    text-align: center;
-    color: white;
-    margin-top: 0.5rem;
-}
-h1{
-    font-size: 2rem;
-}
-.title h2{
-    text-transform: uppercase;
-    font-size: 1rem;
-}
-/* Style for Content Buttons */
-.contact-btns{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    gap: 1rem;
-}
-.btn{
-    display: block;
-    padding: 0.8rem 1.5rem;
-    background-color: #0e7a00;
-    border-radius: 0.4rem;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
-.btn a{
-    color: white;
-    text-decoration: none;
-}
-.btn:hover{
-    cursor: pointer;
-    background-color: #119600;
-}
-/* Social Media btn Style */
-.center-social-menu{
-    width: 100%;
-    z-index: 3;
-    display: grid;
-    place-content: center;
-    position: absolute;
-    bottom: 0;
-}
-.social-media-btns{
-    list-style: none;
-    display: flex;
-    position: relative;
-    gap: 1rem;
-    bottom: -50%;
-}
-#telegram{
-    background-image: url("Images/telegram-ic.png");
-}
-#instagram{
-    background-image: url("Images/insta-ic.png");
-}
-#linkedin{
-    background-image: url("Images/linkedin-ic.png");
-}
-.items-social{
-    border: 0.3rem solid rgb(255, 255, 255);
-    filter: grayscale(100%);
-    transition: all 0.5s ease;
-    border-radius: 1000px;
+    z-index: 9999; /* نمایش بالا از سایر محتوای صفحه */
+    opacity: 1;
+    transition: opacity 3s ease; /* انیمیشن محو شدن */
+  }
+  
+  .loader.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* استایل انیمیشن لودر (دایره چرخان) */
+  .loader .spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db; /* رنگ دایره */
+    border-radius: 50%;
     width: 50px;
     height: 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.items-social a{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.items-social:hover {
-    filter: grayscale(0);
-    cursor: pointer;
-}
-
-/* Main Style */
-
-.container{
-    width: 70%;
-    margin: 2.5rem auto;
-}
-/* Information Styles */
-.information{
-    justify-content: center;
-    border-radius: 1rem;
-    padding: 2rem 1rem;
-    margin: 2.5rem auto;
-    display: flex;
-    gap: 1.5rem;
-    box-shadow: 5px 5px 15px rgb(148, 148, 148);
-}
-/* About Style */
-.information h2{
-    font-size: 2rem;
-    font-weight: bold;
-}
-.about-container p{
-    margin-top: 1rem;
-    text-wrap: wrap;
-    font-weight: 500;
-    font-size: 1rem;
-}
-.about-container{
-    width: 50%;
-}
-/* Info Style */
-.basic-info-container{
-    width: 50%;
-}
-.wrapper-info{
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-}
-.left{
-    width: 30%;
-    font-size: 1.12rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.right{
-    font-size: 1rem;
-    font-weight: 500;
-}
-.info-lsit{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-/* Professional Skills Style */
-.professional-skills{
-    padding: 1rem;
-    box-shadow: 5px 5px 15px rgb(148, 148, 148);
-    border-radius: 1rem;
-}
-.professional-skills h2{
+    animation: spin 1s linear infinite; /* انیمیشن چرخش */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* استایل بخش Header */
+  header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 100px 0;
     text-align: center;
-}
-.Wrapper-list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: green;
-    margin-top: 1rem;
-}
-.left-wrap, .right-wrap{
-    width: 48%;
-}
-.skills-item span{
-    display: inline-block;
-}
-.wrapper-span{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-/* Line Styles */
-.percent-line{
-    position: relative;
-    margin: 1.5rem 0;
-    width: 100%;
-    height: 5px;
-    background-color: #0e7a004b;
-}
-.percent-line::after{
-    position: absolute;
-    content: '';
-    height: 100%;
-    background-color: #0e7a00;
-}
-.html::after{
-    width: 80%;
-}
-.js::after{
-    width: 60%;
-}
-.flex::after{
-    width: 80%;
-}
-.python::after{
-    width: 45%;
-}
-/* Education Styles */
-.education{
-    padding: 1rem;
-    box-shadow: 5px 5px 15px rgb(148, 148, 148);
-    border-radius: 1rem;
-}
-.education h2{
-    text-align: center;
-}
-.field-wrap{
-    display: flex;
-    align-items: center;
-    border-radius: 0.4rem;
-    overflow: hidden;
-}
-.date{
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.4rem;
-    background-color: #0e7a00;
-    padding: 1.5rem 0;
-}
-.description{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.4rem;
-    margin-left: 1rem;
-}
-.date{
-    color: white;
-}
-.university-name{
-    color: gray;
-    text-transform: uppercase;
-}
-.name-degree{
-    font-size: 1.5rem;
-}
-
-/* Contact Me Styles */
-.contact-me-container{
-    width: 60%;
-    margin: 3rem auto;
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: 5px 5px 15px rgb(148, 148, 148);
-}
-.contact-me-container h2{
-    text-align: center;
-}
-.form-container{
-    display: flex;
-    margin-top: 1rem;
-    justify-content: space-between;
-}
-form{
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    gap: 1.3rem;
-}
-#form-title{
-    text-align: start;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  header p {
     font-size: 1.2rem;
-}
-input{
-    width: 100%;
-    height: 2rem;
-    border-radius: 1000px;
-    outline: none;
-    border: 1px solid #0e7a00;
-    padding-left: 1rem;
-    font-size: 1rem;
-}
-textarea{
-    border: 1px solid #0e7a00;
-    width: 100%;
-    height: 6rem;
-    resize: none;
-    outline: none;
-    padding: 0.3rem;
-    border-radius: 0.4rem;
-    font-size: 1rem;
-}
-input:focus, textarea:focus{
-    border: 2px solid #0e7a00;
-}
-form button{
-    width: fit-content;
-    height: fit-content;
-    padding: 0.5rem 1rem;
+    margin: 10px 0;
+  }
+  
+  .cta {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #61dafb; /* رنگ پس‌زمینه */
     color: white;
-    outline: none;
-    border: none;
-    border-radius: 0.4rem;
-    background-color: #0e7a00;
-    transition: all 0.5s ease;
-}
-form button:hover{
-    background-color: #119600;
-}
-/* Ul Style */
-.form-container ul{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    width: 45%;
-    gap: 0.5rem;
-}
-.title-name{
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: bold;
-}
-.sub-name{
-    font-weight: 400;
-    margin-bottom: 1rem;
-}
-#copyright{
     text-align: center;
-}
+    text-decoration: none;
+    border-radius: 30px; /* گوشه‌های گرد */
+    transition: all 0.4s ease; /* انیمیشن نرم برای تغییرات */
+    margin-top: 20px; /* فاصله از بالا */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* سایه‌ی نرم */
+  }
+  
+  /* انیمیشن hover دکمه دانلود */
+  .cta:hover {
+    background-color: #3a9fcf; /* رنگ پس‌زمینه تیره‌تر */
+    transform: scale(1.1) rotate(3deg); /* بزرگتر شدن دکمه و چرخش جزئی */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* سایه برجسته‌تر */
+    letter-spacing: 1px; /* فاصله حروف بیشتر */
+  }
+  /* استایل بخش دکمه‌های شبکه‌های اجتماعی */
+  .social-links {
+    text-align: center;
+    margin-top: 20px; /* کاهش فاصله از بالا */
+  }
+  
+  .social-links .social-button {
+    display: inline-block;
+    position: relative;
+    background-color: #3498db;
+    border-radius: 50%;
+    padding: 10px; /* کاهش اندازه دکمه‌ها */
+    margin: 0 10px;
+    top: -55px;
+    font-size: 24px; /* کوچک‌تر کردن اندازه آیکون */
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* حالت hover با تغییر رنگ و کمی بالا آمدن */
+  .social-links .social-button:hover {
+    transform: translateY(-5px);
+    background-color: #2980b9; /* رنگ تیره‌تر در حالت hover */
+  }
+  
+  /* رنگ‌ها و آیکون‌ها برای هر شبکه اجتماعی */
+  .social-button.linkedin {
+    background-color: #0077b5;
+  }
+  
+  .social-button.telegram {
+    background-color: #0088cc;
+  }
+  
+  .social-button.instagram {
+    background-color: #e1306c;
+  }
+  
+  /* تغییر رنگ آیکون‌ها در حالت hover */
+  .social-links .social-button:hover .fab {
+    color: #fff;
+  }
+  
+  /* استایل برای آیکون‌ها */
+  .fab {
+    font-size: 20px; /* کاهش اندازه آیکون‌ها */
+    transition: color 0.3s ease;
+  }
+  
+  /* استایل بخش About Me */
+  .about {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* استایل بخش Skills */
+  .skills {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+  
+  .skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .skill-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 150px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skill-icon {
+    font-size: 40px;
+    color: #3498db;
+    margin-bottom: 15px;
+  }
+  
+  .skill-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* استایل آیکون‌ها */
+  .fab, .fas {
+    font-size: 50px;
+    transition: color 0.3s ease;
+  }
+  
+  .skill-card:hover .fab, .skill-card:hover .fas {
+    color: #3498db;
+  }
+  
+  /* استایل بخش Experience */
+  .experience {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .experience h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .experience p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* استایل بخش Education */
+  .education {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+  
+  .education h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .education p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Scroll Fade Animation */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .scroll-fade.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-/* Responsive */
-@media only screen and (max-width: 1200px) {
-    .information h2{
-        font-size: 1.5rem;
-    }
-    .about-container p{
-        font-size: 0.9rem;
-    }
-    .left li{
-        font-size: 1rem;
-    }
-    .right li{
-        font-size: 0.9rem;
-    }
-}
-@media only screen and (max-width: 994px) {
-    .with-to-divice{
-        width: 90%;
-    }
-    .information{
-        flex-direction: column;
-    }
-    .about-container{
-        width: 100%;
-    }
-    .information h2{
-        font-size: 1.3rem;
-    }
-    .about-container p{
-        width: 100%;
-        font-size: 0.8rem;
-    }
-    .left li{
-        font-size: 0.9rem;
-    }
-    .right li{
-        font-size: 0.8rem;
-    }
-}
-@media only screen and (max-width: 768px) {
-    #menu{
-        display: none;
-    }
-    #profile{
-        padding-top: 2rem;
-    }
-
-    .form-container form,ul{
-        width: 100%;
-    }
-    .form-container{
-        flex-direction: column-reverse;
-    }
-
-    .date{
-        width: 30%;
-    }
-    /* Cteate Menu Ham */
-    aside{
-        display: block;
-        position: fixed;
-        z-index: 100;
-        width: 40%;
-        height: 100dvh;
-    }
-    aside img{
-        width: 2rem;
-        height: 2rem;
-    }
-    .open-menu{
-        display: block;
-    }
-    .open-menu:hover{
-        cursor: pointer;
-    }
-    #h-menu{
-        height: 100dvh;
-        display: none;
-        flex-direction: column;
-        gap: 0.2rem;
-        padding: 1rem;
-        list-style: none;
-        position: relative;
-        width: 100%;
-        padding-top: 4rem;
-        background: linear-gradient(0deg, rgba(21,21,21,1) 31%, rgba(14,122,0,1) 100%);
-    }
-    .h-menu-items{
-        display: block;
-        overflow: hidden;
-        border-radius: 1rem;
-        width: 100%;
-        transition: all 0.5s ease;
-        height: fit-content;
-    }
-    .h-menu-items a{
-        display: block;
-        text-decoration: none;
-        color: white;
-        font-size: 1rem;
-        font-weight: bold;
-        width: 100%;
-        padding: 1.5rem 1rem;
-    }
-    .close-menu{
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    .h-menu-items:hover{
-        background-color: #ffffff3f;
-    }
-    .close-menu:hover{
-        cursor: pointer;
-    }
-
-}
-@media only screen and (max-width: 600px) {
-    .information h2{
-        font-size: 1.1rem;
-    }
-    .about-container p{
-        width: 100%;
-        font-size: 0.7rem;
-    }
-    .left li{
-        font-size: 0.8rem;
-    }
-    .right li{
-        font-size: 0.7rem;
-    }
-
-    .professional-skills h2{
-        font-size: 1.1rem;
-    }
-    .Skill-name, 
-    .percent{
-        font-size: 0.8rem;
-    }
-    .Wrapper-list{
-        display: block;
-    }
-    .left-wrap,
-    .right-wrap{
-        width: 100%;
-    }
-
-    #education h2{
-        font-size: 1.1rem;
-    }
-    .name-degree{
-        font-size: 1rem;
-    }
-    .university-name{
-        font-size: 0.8rem;
-    }
-    .year{
-        font-size: 0.9rem;
-    }
-    .degree{
-        font-size: 1.07rem;
-    }
-
-    #contact h2{
-        font-size: 1.1rem;
-    }
-    .title-name{
-        font-size: 1rem;
-    }
-    .sub-name{
-        font-size: 0.85rem;
-    }
-    input{
-        font-size: 0.9rem;
-    }
-    textarea{
-        font-size: 0.8rem;
-    }
-}
+  /* استایل بخش Footer */
+  footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  

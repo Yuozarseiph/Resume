@@ -1,166 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width='device-width', initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="Style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yousef Shaker Ardakani - Resume</title>
+  <link rel="stylesheet" href="Style.css">
+  <!-- اضافه کردن فونت آیکون‌ها -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- Create Hamperger menu -->
-    <aside>
-        <img class="open-menu" src="Images/menu-ic.png" alt="open menu">
-        <ul id="h-menu">
-            <img class="close-menu" src="Images/close-ic.png" alt="close menu">
-            <li class="h-menu-items first"><a href="#about">About</a></li>
-            <li class="h-menu-items"><a href="#skills">Skills</a></li>
-            <li class="h-menu-items"><a href="#education">Education</a></li>
-            <li class="h-menu-items"><a href="#contact">Contact</a></li>
-        </ul>
-    </aside>
-    <header>
-        <!-- Create header menu for simple -->
-        <nav id="menu">
-            <ul>
-                <li class="items"><a href="#about">About</a></li>
-                <li class="items"><a href="#skills">Skills</a></li>
-                <li class="items"><a href="#education">Education</a></li>
-                <li class="items"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Create profile contents -->
-        <nav id="profile">
-            <!-- Set profile picture -->
-            <div class="profile-picture">
-                <img src="Images/profile-pic.jpeg" alt="Profile Picture">
-            </div>
-            <!-- Set name and job -->
-            <div class="title">
-                <h1>Yousef Shaker Ardakani</h1>
-                <h2>A freelancer in Ardakan city</h2>
-            </div>
-            <!-- Create floating buttons and contact buttons -->
-            <div class="contact-btns">
-                <span class="contact-me btn"><a href="#contact">Contact Me</a></span>
-                <span class="projects btn"><a href="#">Projects</a></span>
-            </div>
-        </nav>
-        <div class="center-social-menu">
-            <ul class="social-media-btns">
-                <li class="items-social" id="telegram"><a href="https://t.me/developer_iranain"></a></li>
-                <li class="items-social" id="instagram"><a href="https://www.instagram.com/yousefshaker.dev"></a></li>
-                <li class="items-social" id="linkedin"><a href="https://www.linkedin.com/in/yousef-shaker-ba4420338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"></a></li>
-            </ul>
+  <!-- Loder Section -->
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="scroll-fade">
+    <div class="content">
+      <h1>Yousef Shaker Ardakani</h1>
+      <p>Front-End Developer & Computer Engineering Student</p>
+      <a href="mailto:yousefshakerdev@gmail.com" class="cta">Contact Me</a>
+    </div>
+  </header>
+
+  <!-- دکمه‌های شبکه‌های اجتماعی -->
+  <section class="social-links scroll-fade">
+    <div class="container">
+      <a href="https://www.linkedin.com/in/your-profile-link" target="_blank" class="social-button linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://t.me/developer_iranain" target="_blank" class="social-button telegram">
+        <i class="fab fa-telegram-plane"></i>
+      </a>
+      <a href="https://www.instagram.com/yousefshaker.dev" target="_blank" class="social-button instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="about scroll-fade">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a Computer Engineering student at the University of Yazd, and a passionate Front-End Developer. I specialize in creating visually appealing, user-friendly websites, and I am continuously learning new technologies, including React. I am currently looking for opportunities to collaborate and gain professional experience in the tech industry.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills scroll-fade">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <h3>HTML</h3>
         </div>
-    </header>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <h3>CSS</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fab fa-react"></i></div>
+          <h3>React (Learning)</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+          <h3>Git & GitHub</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-palette"></i></div>
+          <h3>UI/UX Design</h3>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section data-aos="fade-right" class="information container with-to-divice" id="about">
-            <div class="about-container">
-                <h2>About</h2>
-                <p>I am a junior developer with experience in front-end web development.
-                    <br><br>I am currntly studying computer engineering at Yazd University.
-                </p>
-            </div>
-            <div class="basic-info-container">
-                <h2>Basic Information</h2>
-                <div class="wrapper-info">
-                    <ul class="info-lsit left">
-                        <li class="info-items">Age:</li>
-                        <li class="info-items">Email:</li>
-                        <li class="info-items">Phone:</li>
-                        <li class="info-items">Address:</li>
-                    </ul>
-                    <ul class="info-lsit right">
-                        <li class="info-items">20</li>
-                        <li class="info-items">YousefShakerDev@gmail.com</li>
-                        <li class="info-items">09107860475</li>
-                        <li class="info-items">Iran/Yazd/Ardakan</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <!-- Experience Section -->
+  <section class="experience scroll-fade">
+    <div class="container">
+      <h2>Experience</h2>
+      <p>As a beginner, I am looking for an opportunity to work on real-world projects and grow my skill set in front-end development. I have been working on various personal projects and academic assignments as part of my studies at university.</p>
+    </div>
+  </section>
 
-        <section data-aos="fade-left" class="professional-skills container with-to-divice" id="skills">
-            <h2>Professional Skills</h2>
-            <div class="Wrapper-list">
-                <!-- Items Container -->
-                <div class="right-wrap">
-                    <div class="skills-item">
-                        <div class="wrapper-span">
-                            <span class="Skill-name">Html/Css</span>
-                            <span class="percent">80%</span>
-                        </div>
-                        <span class="percent-line html"></span>
-                    </div>
-                    <div class="skills-item">
-                        <div class="wrapper-span">
-                            <span class="Skill-name">JavaScript</span>
-                            <span class="percent">60%</span>
-                        </div>
-                        <span class="percent-line js"></span>
-                    </div>
-                </div>
-                <!-- Up : left / Down : right -->
-                <div class="left-wrap">
-                    <div class="skills-item">
-                        <div class="wrapper-span">
-                            <span class="Skill-name">FlexBox</span>
-                            <span class="percent">80%</span>
-                        </div>
-                        <span class="percent-line flex"></span>
-                    </div>
-                    <div class="skills-item">
-                        <div class="wrapper-span">
-                            <span class="Skill-name">Python</span>
-                            <span class="percent">45%</span>
-                        </div>
-                        <span class="percent-line python"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- Education Section -->
+  <section class="education scroll-fade">
+    <div class="container">
+      <h2>Education</h2>
+      <p><strong>University of Yazd</strong><br>Computer Engineering Student (2023 - 2027)</p>
+    </div>
+  </section>
 
-        <section data-aos="fade-right" class="education container with-to-divice" id="education">
-            <h2>Education</h2>
-            <div class="field-wrap">
-                <div class="date">
-                    <h4 class="year">2024</h4>
-                    <h3 class="degree">Studying</h3>
-                </div>
-                <div class="description">
-                    <h3 class="name-degree">Computer Engineer</h3>
-                    <h4 class="university-name">University of Yazd</h4>
-                </div>
-            </div>
-        </section>
+  <!-- Footer Section -->
+  <footer class="scroll-fade">
+    <div class="container">
+      <p>&copy; 2024 Yousef Shaker Ardakani</p>
+    </div>
+  </footer>
 
-        <section data-aos="fade-left" class="contact-me-container with-to-divice" id="contact">
-            <h2>Contact Me</h2>
-            <div class="form-container">
-                <form>
-                    <input id="name" type="text" placeholder="Enter your name">
-                    <input id="subject" type="text" placeholder="Subject">
-                    <input id="email" type="email" placeholder="Enter your email">
-                    <textarea placeholder="Enter your message" name="" id="message"></textarea>
-                    <button id="send" type="submit">Send</button>
-                </form>
-                <ul>
-                    <li class="title-name">Address</li>
-                    <li class="sub-name">Iran/Yazd/Ardakan</li>
-                    <li class="title-name">Phone</li>
-                    <li class="sub-name">+98-910-7860475</li>
-                    <li class="title-name">Email</li>
-                    <li class="sub-name">YousefShakerDev@gmail.com</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-    
-    <p id="copyright">© 2024 Yousef Shaker Ardakani</p>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="Script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
