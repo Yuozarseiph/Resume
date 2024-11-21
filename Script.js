@@ -1,15 +1,11 @@
 window.addEventListener('load', () => {
-    // اضافه کردن تاخیر برای پایان انیمیشن لودر
     setTimeout(() => {
       const loader = document.querySelector('.loader');
-      // محو کردن لودر
       loader.style.opacity = 0;
-      
-      // بعد از پایان انیمیشن، display را none کنیم
       setTimeout(() => {
         loader.style.display = 'none';
-      }, 2000); // مدت زمانی که انیمیشن محو شدن طول می‌کشد
-    }, 100); // تأخیر اولیه که می‌توانید تنظیم کنید
+      }, 2000);
+    }, 100);
   });
 
 // Scroll animation using IntersectionObserver
