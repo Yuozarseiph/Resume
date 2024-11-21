@@ -1,4 +1,4 @@
-/* استایل کلی صفحه */
+/* full Style page */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -12,20 +12,20 @@ body {
     margin: 0 auto;
   }
   
-  /* استایل لودر */
+  /* Loader Style */
   .loader {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* پس‌زمینه تیره */
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* نمایش بالا از سایر محتوای صفحه */
+    z-index: 9999;
     opacity: 1;
-    transition: opacity 3s ease; /* انیمیشن محو شدن */
+    transition: opacity 3s ease;
   }
   
   .loader.hide {
@@ -33,14 +33,14 @@ body {
     pointer-events: none;
   }
   
-  /* استایل انیمیشن لودر (دایره چرخان) */
+  /* Loader style and animation */
   .loader .spinner {
     border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db; /* رنگ دایره */
+    border-top: 8px solid #3498db;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: spin 1s linear infinite; /* انیمیشن چرخش */
+    animation: spin 1s linear infinite;
   }
   
   @keyframes spin {
@@ -48,7 +48,7 @@ body {
     100% { transform: rotate(360deg); }
   }
   
-  /* استایل بخش Header */
+  /* Header Style */
   header {
     background-color: #2c3e50;
     color: #fff;
@@ -69,75 +69,65 @@ body {
   .cta {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #61dafb; /* رنگ پس‌زمینه */
+    background-color: #61dafb;
     color: white;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    border-radius: 30px; /* گوشه‌های گرد */
-    transition: all 0.4s ease; /* انیمیشن نرم برای تغییرات */
-    margin-top: 20px; /* فاصله از بالا */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* سایه‌ی نرم */
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
-  /* انیمیشن hover دکمه دانلود */
+  /* contact hover style */
   .cta:hover {
-    background-color: #3a9fcf; /* رنگ پس‌زمینه تیره‌تر */
-    transform: scale(1.1) rotate(3deg); /* بزرگتر شدن دکمه و چرخش جزئی */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* سایه برجسته‌تر */
-    letter-spacing: 1px; /* فاصله حروف بیشتر */
+    background-color: #3a9fcf;
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
   }
-  /* استایل بخش دکمه‌های شبکه‌های اجتماعی */
+  /* social media buttons styles */
   .social-links {
     text-align: center;
-    margin-top: 20px; /* کاهش فاصله از بالا */
+    margin-top: 20px;
   }
   
   .social-links .social-button {
     display: inline-block;
     position: relative;
-    background-color: #3498db;
+    background-color: #333;
     border-radius: 50%;
-    padding: 10px; /* کاهش اندازه دکمه‌ها */
+    padding: 10px;
     margin: 0 10px;
     top: -55px;
-    font-size: 24px; /* کوچک‌تر کردن اندازه آیکون */
+    font-size: 24px;
     color: white;
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
-  
-  /* حالت hover با تغییر رنگ و کمی بالا آمدن */
-  .social-links .social-button:hover {
+  /* social media icon colors */
+  .social-button.linkedin:hover {
     transform: translateY(-5px);
-    background-color: #2980b9; /* رنگ تیره‌تر در حالت hover */
-  }
-  
-  /* رنگ‌ها و آیکون‌ها برای هر شبکه اجتماعی */
-  .social-button.linkedin {
     background-color: #0077b5;
   }
   
-  .social-button.telegram {
+  .social-button.telegram:hover {
+    transform: translateY(-5px);
     background-color: #0088cc;
   }
   
-  .social-button.instagram {
+  .social-button.instagram:hover {
+    transform: translateY(-5px);
     background-color: #e1306c;
   }
-  
-  /* تغییر رنگ آیکون‌ها در حالت hover */
+
+  /* hover effect */
   .social-links .social-button:hover .fab {
     color: #fff;
   }
   
-  /* استایل برای آیکون‌ها */
-  .fab {
-    font-size: 20px; /* کاهش اندازه آیکون‌ها */
-    transition: color 0.3s ease;
-  }
-  
-  /* استایل بخش About Me */
+  /* About section */
   .about {
     padding: 50px 0;
     background-color: #fff;
@@ -155,7 +145,7 @@ body {
     line-height: 1.6;
   }
   
-  /* استایل بخش Skills */
+  /* Skills section */
   .skills {
     padding: 50px 0;
     background-color: #f8f8f8;
@@ -203,7 +193,7 @@ body {
     margin-top: 10px;
   }
   
-  /* استایل آیکون‌ها */
+  /* icons style */
   .fab, .fas {
     font-size: 50px;
     transition: color 0.3s ease;
@@ -212,8 +202,9 @@ body {
   .skill-card:hover .fab, .skill-card:hover .fas {
     color: #3498db;
   }
+
   
-  /* استایل بخش Experience */
+  /* Experience section */
   .experience {
     padding: 50px 0;
     background-color: #fff;
@@ -232,7 +223,7 @@ body {
     line-height: 1.6;
   }
   
-  /* استایل بخش Education */
+  /* Education section */
   .education {
     padding: 50px 0;
     background-color: #f8f8f8;
@@ -251,7 +242,7 @@ body {
     line-height: 1.6;
   }
 
-  
+
   /* Scroll Fade Animation */
 .scroll-fade {
     opacity: 0;
@@ -264,7 +255,7 @@ body {
     transform: translateY(0);
   }
 
-  /* استایل بخش Footer */
+  /* Footer section */
   footer {
     background-color: #2c3e50;
     color: #fff;
